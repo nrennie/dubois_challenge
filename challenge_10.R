@@ -68,16 +68,16 @@ p10 <- ggplot() +
   scale_fill_manual("", values = c("red"="red", "lightpink"="lightpink", "gold2"="gold2", "olivedrab4"="olivedrab4",
                                    "black"="black", "blue4"="blue4", "tan4"="tan4", "antiquewhite3"="antiquewhite3","purple"="purple", "white" = "white")) +
   coord_cartesian(clip = 'off') +
-  theme(panel.background = element_rect(fill = "wheat1", color = NA),
-        plot.background = element_rect(fill = "wheat1"),
-        legend.background = element_rect(fill = "wheat1"),
+  theme(panel.background = element_rect(fill = "antiquewhite2", color = NA),
+        plot.background = element_rect(fill = "antiquewhite2"),
+        legend.background = element_rect(fill = "antiquewhite2"),
         plot.title = element_text(colour = "black", size=12, hjust = 0.5, face="bold", family="Lucida Sans Typewriter"),
         plot.subtitle = element_text(colour = "black", size=10, hjust = 0.5, face="bold", family="Lucida Sans Typewriter"),
         legend.title = element_blank(),
         legend.position="none",
         legend.justification=c(0.5,0),
         plot.margin = unit(c(0.2, 2, 1, 2), "cm"), #top, right, bottom, left
-        legend.key = element_rect(fill = "wheat3"),
+        legend.key = element_rect(fill = "antiquewhite2"),
         legend.spacing.x = unit(0.1,"cm"),
         legend.text = element_text(colour=alpha("black",0.5), size=6, family="Lucida Sans Typewriter", margin = margin(r = 100, unit = "pt")),
         axis.title.x= element_blank(),

@@ -13,12 +13,12 @@ p04 <- ggplot(data = d, aes(year)) +
        subtitle="DONE BY ATLANTA UNIVERSITY\n") +
   geom_text(aes(x=year, y=c(slaves[1:length(slaves)-1],slaves[length(slaves)-1])+3, label=label), colour="black", size=4, fontface=2, family="Tw Cen MT Condensed") +
   geom_text(aes(x=year, y=103, label=year), colour="black", fontface=2, size=5, family="Tw Cen MT Condensed") +
-  annotate("text", x = 1830, y = 55, label = "SLAVES", colour = "wheat2", size=7, fontface=2, family="Tw Cen MT Condensed") +
-  annotate("text", x = 1830, y = 50, label = "ESCLAVES", colour = "wheat2", size=7, fontface=2, family="Tw Cen MT Condensed") +
+  annotate("text", x = 1830, y = 55, label = "SLAVES", colour = "antiquewhite2", size=7, fontface=2, family="Tw Cen MT Condensed") +
+  annotate("text", x = 1830, y = 50, label = "ESCLAVES", colour = "antiquewhite2", size=7, fontface=2, family="Tw Cen MT Condensed") +
   annotate("text", x = 1830, y = 96, label = "FREE - LIBRE", colour = "black", size=6, fontface=2, family="Tw Cen MT Condensed") +
-  theme(panel.background = element_rect(fill = "wheat2"),
-        plot.background = element_rect(fill = "wheat2"),
-        legend.background = element_rect(fill = "wheat2"),
+  theme(panel.background = element_rect(fill = "antiquewhite2"),
+        plot.background = element_rect(fill = "antiquewhite2"),
+        legend.background = element_rect(fill = "antiquewhite2"),
         plot.title = element_text(colour = "black", size=12, face="bold", family="Tw Cen MT Condensed", hjust = 0.5),
         plot.subtitle = element_text(colour = "black", size=8, face="bold", hjust = 0.5, family="Tw Cen MT Condensed"),
         plot.margin = unit(c(0.2, 0.2, -0.4, 0.2), "cm"), #top, right, bottom, left
@@ -35,7 +35,7 @@ p04 <- ggplot(data = d, aes(year)) +
         panel.grid.major = element_blank(), panel.grid.minor = element_blank()
   )
 p04
-setwd("C:/Users/rennien/OneDrive - Lancaster University/Programming/R/dubois_challenge/images")
+
 ggsave(p04, filename = "challenge_04.jpg", height=6.25, width=5, unit="in")
 
 
