@@ -46,6 +46,13 @@ Challenge 6</h3>
 </p>
 
 <h3 align="center">
+Challenge 7</h3>
+
+<p align="center">
+<img src="https://github.com/nrennie/dubois_challenge/blob/main/images/challenge_07.jpg?raw=true" width="50%"><img src="https://github.com/nrennie/dubois_challenge/blob/main/images/original_07.jpg?raw=true" width="50%">
+</p>
+
+<h3 align="center">
 Challenge 10</h3>
 
 <p align="center">
