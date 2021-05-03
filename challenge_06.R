@@ -21,9 +21,9 @@ p <- ggplot() + geom_point(data=df, aes(x,y), col='red3', size=1.5) +
   annotate("text", x=5, y=57, label="NEGROES IN CITIES\nFROM 5,000 TO 10,000", col="black", size=2, hjust=0, vjust=0.5) +
   annotate("text", x=-5, y=45, label="37,699\nNEGROES\nIN CITIES\nFROM\n2,500 TO 5,000", col="black", size=2, hjust=0.5) +
   annotate("text", x=0, y=-20, label="NEGROES LIVING IN THE COUNTRY AND VILLAGES", col="black", size=2, hjust=0.5) +
-  theme(panel.background = element_rect(fill = "seashell2"),
-        plot.background = element_rect(fill = "seashell2"),
-        legend.background = element_rect(fill = "seashell2"),
+  theme(panel.background = element_rect(fill = "#d0bba8"),
+        plot.background = element_rect(fill = "#d0bba8"),
+        legend.background = element_rect(fill = "#d0bba8"),
         plot.title = element_text(colour = "black", size=12, face="bold", hjust = 0.5),
         plot.subtitle = element_text(colour = "black", size=10, face="bold", hjust = 0.5),
         legend.title = element_blank(),
