@@ -90,7 +90,7 @@ p10 <- ggplot() +
   )
 p10
 
-ggsave(p10, filename = "challenge_10.jpg", height=6.25, width=5, unit="in")
+ggsave(p10, filename = "2021/images/challenge_10.jpg", height=6.25, width=5, unit="in")
 
 
 

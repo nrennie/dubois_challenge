@@ -36,7 +36,7 @@ p04 <- ggplot(data = d, aes(year)) +
   )
 p04
 
-ggsave(p04, filename = "challenge_04.jpg", height=6.25, width=5, unit="in")
+ggsave(p04, filename = "2021/images/challenge_04.jpg", height=6.25, width=5, unit="in")
 
 
 

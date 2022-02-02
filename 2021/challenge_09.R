@@ -6,11 +6,11 @@ library(dplyr)
 library(cowplot)
 library(datasets)
 
-setwd("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/dubois_challenge/data")
+setwd("2021/data")
 birthplace <- read.csv("birthplace.csv")
 present <- read.csv("present.csv")
 
-setwd("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/dubois_challenge/data/us_states")
+setwd("./us_states")
 #get historic shape files from https://publications.newberry.org/ahcbp/downloads/united_states.html
 us = readOGR(dsn=".", layer="US_HistStateTerr", stringsAsFactors = FALSE)
 us$start_year <- substr(us$START_DATE, 1, 4)
@@ -75,7 +75,6 @@ p1 <- ggplot() +
         panel.grid.minor = element_blank(),
         panel.grid.major = element_blank()
   )
-#p1
 
 
 #####################################################################################################################################
@@ -130,7 +129,6 @@ p2 <- ggplot() +
         panel.grid.minor = element_blank(),
         panel.grid.major = element_blank()
   )
-#p2
 
 gt1 <- ggplot_gtable(ggplot_build(p1))
 gt2 <- ggplot_gtable(ggplot_build(p2))

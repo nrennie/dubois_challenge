@@ -44,5 +44,4 @@ p01
 #grid.locator(unit="native") 
 grid.brackets(410, 490, 90, 490, lwd=0.5, col="gray57")
 
-setwd("C:/Users/rennien/OneDrive - Lancaster University/Programming/R/dubois_challenge/images")
-ggsave(p01, filename = "challenge_01.jpg", height=6.25, width=5, unit="in")
+ggsave(p01, filename = "2021/images/challenge_01.jpg", height=6.25, width=5, unit="in")

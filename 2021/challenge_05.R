@@ -127,13 +127,12 @@ p <- ggplot() +
 p
 
 #grid.locator(unit="native") 
-setwd("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/dubois_challenge/data/images")
-logo_file <- system.file("extdata", "original_05.jpg", package = "cowplot")
+logo_file <- system.file("extdata", "2021/data/images/original_05.jpg", package = "cowplot")
 q <- ggdraw() +
   draw_plot(p) +
-  draw_image("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/dubois_challenge/data/images/original_05.jpg", 
+  draw_image("2021/data/images/original_05.jpg", 
              x = 0.1, y = 0.3, scale = .6) +
-  draw_image("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/dubois_challenge/data/images/original_05b.jpg", 
+  draw_image("2021/data/images/original_05b.jpg", 
              x = -0.35, y = 0.3, scale = .2) 
 q
 grid.brackets(696, 217, 696, 286, lwd=0.5, col=alpha("black",0.7)) 
@@ -141,5 +140,4 @@ grid.brackets(696, 308, 696, 379, lwd=0.5, col=alpha("black",0.7))
 grid.brackets(696, 398, 696, 471, lwd=0.5, col=alpha("black",0.7)) 
 grid.brackets(696, 493, 696, 521, lwd=0.5, col=alpha("black",0.7)) 
 
-#dev.new(width=8,height=6,unit="in", noRStudioGD = TRUE)
-#ggsave(p, filename = "challenge_05.jpg",  bg = "transparent", height=6, width=8, unit="in")
+dev.new(width=8,height=6,unit="in", noRStudioGD = TRUE)

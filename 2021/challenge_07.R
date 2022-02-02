@@ -65,5 +65,5 @@ p <- ggplot() +
 
 p
 
-#dev.new(width=6,height=8,unit="in", noRStudioGD = TRUE)
-ggsave(p, filename = "challenge_07.jpg",  bg = "transparent", height=8, width=6, unit="in")
+dev.new(width=6,height=8,unit="in", noRStudioGD = TRUE)
+ggsave(p, filename = "2021/images/challenge_07.jpg",  bg = "transparent", height=8, width=6, unit="in")

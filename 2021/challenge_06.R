@@ -43,5 +43,5 @@ p <- ggplot() + geom_point(data=df, aes(x,y), col='red3', size=1.5) +
 
 p
 
-#dev.new(width=4,height=6,unit="in", noRStudioGD = TRUE)
-ggsave(p, filename = "challenge_06.jpg",  bg = "transparent", height=6, width=4, unit="in")
+dev.new(width=4,height=6,unit="in", noRStudioGD = TRUE)
+ggsave(p, filename = "2021/images/challenge_06.jpg",  bg = "transparent", height=6, width=4, unit="in")
