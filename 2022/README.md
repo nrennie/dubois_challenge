@@ -12,7 +12,13 @@ Challenge 1</h3>
 <h3 align="center">
 Challenge 4</h3>
 <p align="center">
-<img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/challenge_04.jpg?raw=true" width="50%"><img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/original_04.jpg?raw=true" width="50%">
+<img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/challenge_04.jpg?raw=true" width="40%" height = "50%"><img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/original_04.jpg?raw=true" width="40%" height = "50%">
+</p>
+
+<h3 align="center">
+Challenge 6</h3>
+<p align="center">
+<img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/challenge_06.jpg?raw=true" width="40%" height = "50%"><img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/original_06.jpg?raw=true" width="40%" height = "50%">
 </p>
 
 <h3 align="center">
