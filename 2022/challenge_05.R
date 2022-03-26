@@ -15,6 +15,11 @@ df_long <- df %>%
   mutate(Type = factor(Type, levels = c("Slave", "Free")))
 df_long[17, 3] <- 0.000001
 df_long[18, 3] <- 3 - 0.000001
+df_long <- df_long %>% 
+  add_row(Year = 1863, Type = "Slave", perc = 0.000001) %>% 
+  add_row(Year = 1863, Type = "Free", perc = (3 - 0.000001)) %>% 
+  mutate(Type = factor(Type, levels = c("Slave", "Free")))
+
 
 df_wide <- df %>% 
   mutate(Slave = Slave - 97, 
@@ -24,7 +29,7 @@ df_wide <- df %>%
 p <- ggplot() +
   geom_area(data = df_long, aes(x = Year, y = perc, fill = Type)) +
   geom_text(data = df_wide, aes(x = Year, y = -0.3, label = label), family="space", size = 5) +
-  geom_segment(data = df_long, aes(x = Year, xend = Year, y = 0, yend = 3), colour = "#ddccbb", size = 0.3) +
+  geom_segment(data = filter(df_long, Year != 1863), aes(x = Year, xend = Year, y = 0, yend = 3), colour = "#ddccbb", size = 0.3) +
   annotate("text", x = 1788, y = c(1, 2, 3), label = paste(1:3, "%", sep = ""), family="space", size = 5) +
   annotate("text", x = 1787, y = -0.3, label = "PERCENT\nOF\nFREE NEGROES", family="space", size = 4, lineheight = 0.3) +
   labs(title = "SLAVES AND FREE NEGROES.", 
