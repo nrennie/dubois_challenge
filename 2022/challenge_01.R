@@ -1,4 +1,4 @@
-library(extrafont)
+library(showtext)
 library(ggplot2)
 library(gridExtra)
 library(rnaturalearth)
@@ -10,13 +10,15 @@ library(rnaturalearthhires)
 
 `%notin%` <- Negate(`%in%`)
 
-#dev.new(width=6,height=8,unit="in", noRStudioGD = TRUE)
+# load fonts
+font_add_google(name = "Space Mono", family = "space")
+showtext_auto()
 
+# data
 world <- ne_countries(scale = "small", returnclass = "sf")
 
 usa <- ne_states(iso_a2 = 'us', returnclass = "sf")
 brazil <- ne_states(country = 'brazil', returnclass = "sf")
-
 amer <- world[world$region_un %in% c("Americas"),] 
 country_col1 <- rep("tan", length(amer$name))
 amer$country_col1 <- country_col1
@@ -40,11 +42,11 @@ p1 <- ggplot() +
   geom_point(data=data.frame(x = 2121000, y =5580000), aes(x=x, y=y), pch=19, size=1, col="white") +
   coord_sf(crs = "+proj=laea +lat_0=10 +lon_0=-60 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs ",
            xlim=c(-2339981, 12803058)-3400000, ylim=c(-5095286, 9970916)+1500000) +
-  theme(panel.background = element_rect(fill = "#d0bba8"),
-        plot.background = element_rect(fill = "#d0bba8"),
-        legend.background = element_rect(fill = "#d0bba8"),
-        plot.title = element_text(colour = "black", size=12, face="bold", hjust = 0.5, family="Lucida Sans Typewriter"),
-        plot.subtitle = element_text(colour = "black", size=10, face="bold", hjust = 0.5, family="Lucida Sans Typewriter"),
+  theme(panel.background = element_rect(fill = "#d0bba8", colour = "#d0bba8"),
+        plot.background = element_rect(fill = "#d0bba8", colour = "#d0bba8"),
+        legend.background = element_rect(fill = "#d0bba8", colour = "#d0bba8"),
+        plot.title = element_text(colour = "black", size=12, face="bold", hjust = 0.5, family="space"),
+        plot.subtitle = element_text(colour = "black", size=10, face="bold", hjust = 0.5, family="space"),
         legend.title = element_blank(),
         legend.position="none",
         plot.margin = unit(c(6, 0, 6, 0), "cm"), #top, right, bottom, left
@@ -79,11 +81,11 @@ p2 <- ggplot() +
   geom_sf(data = afr_eur, fill=country_col2) +
   coord_sf(crs = "+proj=laea +lat_0=40 +lon_0=45 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs ",
            xlim=c(-2339981, 12803058), ylim=c(-5095286, 9970916)) +
-  theme(panel.background = element_rect(fill = "#d0bba8"),
-        plot.background = element_rect(fill = "#d0bba8"),
-        legend.background = element_rect(fill = "#d0bba8"),
-        plot.title = element_text(colour = "black", size=12, face="bold", hjust = 0.5, family="Lucida Sans Typewriter"),
-        plot.subtitle = element_text(colour = "black", size=10, face="bold", hjust = 0.5, family="Lucida Sans Typewriter"),
+  theme(panel.background = element_rect(fill = "#d0bba8", colour = "#d0bba8"),
+        plot.background = element_rect(fill = "#d0bba8", colour = "#d0bba8"),
+        legend.background = element_rect(fill = "#d0bba8", colour = "#d0bba8"),
+        plot.title = element_text(colour = "black", size=12, face="bold", hjust = 0.5, family="space"),
+        plot.subtitle = element_text(colour = "black", size=10, face="bold", hjust = 0.5, family="space"),
         legend.title = element_blank(),
         legend.position="none",
         plot.margin = unit(c(6, 0, 6, 0), "cm"), #top, right, bottom, left
@@ -107,25 +109,29 @@ p
 
 g1 <- grid::circleGrob(gp = grid::gpar(fill = "white"))
 
-ggdraw(p) +
+q <- ggdraw(p) +
   theme(plot.background = element_rect(fill="#d0bba8", color = "#d0bba8")) +
   draw_grob(g1, x=-0.25, y=-0.285, scale = 0.015) +
   draw_label("THE GEORGIA NEGRO .", x = 0.5, y = 0.92, hjust = 0.5, vjust = 0.5, 
-             fontfamily = "Lucida Sans Typewriter", fontface="bold", color = alpha("black",0.9), size = 11) +
+             fontfamily = "space", fontface="bold", color = alpha("black",0.9), size = 11) +
   draw_label("A SOCIAL STUDY\nBY\nW.E.BURGHARDT DU BOIS.", x = 0.5, y = 0.86, hjust = 0.5, vjust = 0.5, 
-             fontfamily = "Lucida Sans Typewriter", color = alpha("black",0.9), size = 9) +
+             fontfamily = "space", color = alpha("black",0.9), size = 9) +
   draw_label("ROUTES OF THE AFRICAN SLAVE TRADE", x = 0.3, y = 0.25, hjust = 0, vjust = 0.5, 
-             fontfamily = "Lucida Sans Typewriter", color = alpha("black",0.7), size = 9) +
+             fontfamily = "space", color = alpha("black",0.7), size = 9) +
   draw_label("__", x = 0.24, y = 0.26, hjust = 0, vjust = 0.5, 
-             fontfamily = "Lucida Sans Typewriter", color = alpha("black",0.7), size = 9) +
+             fontfamily = "space", color = alpha("black",0.7), size = 9) +
   draw_label("THE STATE OF GEORGIA", x = 0.3, y = 0.22, hjust = 0, vjust = 0.5, 
-             fontfamily = "Lucida Sans Typewriter", color = alpha("black",0.7), size = 9) +
+             fontfamily = "space", color = alpha("black",0.7), size = 9) +
   draw_label("THIS CASE IS DEVOTED TO A SERIES OF CHARTS., MAPS AND OTHER DEVI-\nCES DESIGNED TO ILLUSTRATE THE DEVELOPMENT OF THE AMERICAN NEGRO IN A\nSINGLE TYPICAL STATE OF THE UNITED STATES.\n\nTHE PROBLEM OF THE 20TH CENTURY IS THE PROBLEM OF THE\nCOLOR LINE.", 
-             x = 0.5, y = 0.1, hjust = 0.5, vjust = 0.5, fontfamily = "Lucida Sans Typewriter", color = alpha("black",0.7), size = 9) +
+             x = 0.5, y = 0.1, hjust = 0.5, vjust = 0.5, fontfamily = "space", color = alpha("black",0.7), size = 9) +
   draw_line(x=c(0.39, 0.62), y=c(0.43, 0.38), colour="black", size=0.5) +
   draw_line(x=c(0.26, 0.62), y=c(0.53, 0.45), colour="black", size=0.5) +
   draw_line(x=c(0.27, 0.62), y=c(0.51, 0.45), colour="black", size=0.5) +
   draw_line(x=c(0.27, 0.62), y=c(0.54, 0.45), colour="black", size=0.5)
+
+q
+
+ggsave(q, filename = "2022/images/challenge_01.jpg", height = 750, width = 600, unit = "px")
 
 
 
