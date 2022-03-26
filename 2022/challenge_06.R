@@ -14,7 +14,7 @@ p <- ggplot(data = df,
   geom_segment(aes(y = 1950, yend = Date, x = `Iliteracy Rate`, xend = `Iliteracy Rate`), 
                size = 2) +
   geom_segment(aes(y = Date, yend = Date, x = 100, xend = `Iliteracy Rate`-1), 
-               size = 2, colour = "#dfd3c2") +
+               size = 2, colour = "#dac8b8") +
   # line borders
   geom_segment(aes(y = Date+0.8, yend = Date+0.8, x = 101, xend = `Iliteracy Rate`-1), 
                size = 0.2, colour = "black") +
@@ -32,8 +32,8 @@ p <- ggplot(data = df,
   labs(x = "", 
        y = "", 
        title = "ILLITERACY.") +
-  theme(plot.background = element_rect(fill = "#dfd3c2", colour="#dfd3c2"),
-        panel.background = element_rect(fill = "#dfd3c2", colour="#dfd3c2"), 
+  theme(plot.background = element_rect(fill = "#dac8b8", colour="#dac8b8"),
+        panel.background = element_rect(fill = "#dac8b8", colour="#dac8b8"), 
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(), 
         plot.title = element_text(family = "space", face = "bold", hjust = 0.3, size = 24),
