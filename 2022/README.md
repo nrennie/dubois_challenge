@@ -46,6 +46,12 @@ Challenge 8</h3>
 </p>
 
 <h3 align="center">
+Challenge 9</h3>
+<p align="center">
+<img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/challenge_09.jpg?raw=true" width="50%"><img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/original_09.jpg?raw=true" width="50%">
+</p>
+
+<h3 align="center">
 Challenge 10</h3>
 <p align="center">
 <img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/challenge_10.jpg?raw=true" width="50%"><img src="https://github.com/nrennie/dubois_challenge/blob/main/2022/images/original_10.jpg?raw=true" width="50%">
